@@ -24,11 +24,11 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4354
 
 PRODUCT_COPY_FILES += \
     device/sony/leo/rootdir/logo.rle:root/logo.rle \
-    device/sony/leo/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
+    device/sony/leo/rootdir/system/etc/BCM4354.hcd:system/etc/firmware/BCM43xx.hcd \
     device/sony/leo/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
     device/sony/leo/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/leo/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/sony/leo/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    device/sony/leo/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml
 
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
