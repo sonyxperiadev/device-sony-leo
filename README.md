@@ -20,6 +20,7 @@ Put the following snippet in `.repo/local_manifests/shinano.xml`:
 <remove-project name="platform/hardware/akm" />
 
 <project path="device/sony/aries" name="device-sony-aries" groups="device" remote="sony" revision="master" />
+<project path="device/sony/castor" name="device-sony-castor" groups="device" remote="sony" revision="master" />
 <project path="device/sony/leo" name="device-sony-leo" groups="device" remote="sony" revision="master" />
 <project path="device/sony/sirius" name="device-sony-sirius" groups="device" remote="sony" revision="master" />
 <project path="device/sony/shinano" name="device-sony-shinano" groups="device" remote="sony" revision="master" />
