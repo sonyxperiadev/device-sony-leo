@@ -64,7 +64,8 @@ PRODUCT_COPY_FILES += \
     device/sony/leo/rootdir/system/etc/tfa98xx/FMSpeaker_btm.eq:/system/etc/tfa98xx/FMSpeaker_btm.eq \
     device/sony/leo/rootdir/system/etc/tfa98xx/TFA9890_Receiver.config:/system/etc/tfa98xx/TFA9890_Receiver.config \
     device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
+    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq \
+    device/sony/leo/rootdir/init.leo.usb.rc:root/init.leo.usb.rc
 
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
