@@ -1,0 +1,4 @@
+on boot
+    # Tap-to-Wake Permissions
+    chown system system /sys/devices/virtual/input/clearpad/wakeup_gesture
+    chmod 0660 /sys/devices/virtual/input/clearpad/wakeup_gesture

@@ -16,6 +16,8 @@ include device/sony/shinano/BoardConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := D6603
 
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+
 #Reserve space for data encryption (12656259072-16384)
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688
 
