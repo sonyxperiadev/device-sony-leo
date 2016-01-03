@@ -24,4 +24,3 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12656242688
 PRODUCT_VENDOR_KERNEL_HEADERS += device/sony/leo/kernel-headers
 
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
-TARGET_TAP_TO_WAKE_STRING := true
