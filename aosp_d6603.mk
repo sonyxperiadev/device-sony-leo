@@ -30,7 +30,6 @@ PRODUCT_COPY_FILES += \
     device/sony/leo/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/sony/leo/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
     device/sony/leo/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    device/sony/leo/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
     device/sony/leo/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/leo/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/leo/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
