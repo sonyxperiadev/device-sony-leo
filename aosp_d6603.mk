@@ -67,6 +67,10 @@ PRODUCT_COPY_FILES += \
     device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
     device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
 
+# NFC config
+PRODUCT_PACKAGES += nfc_nci.leo
+ADDITIONAL_DEFAULT_PROPERTIES += ro.hardware.nfc_nci=leo
+
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
 PRODUCT_MODEL := Xperia Z3 (AOSP)
