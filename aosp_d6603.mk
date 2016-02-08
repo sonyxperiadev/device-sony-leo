@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
 
 # NFC config
 PRODUCT_PACKAGES += \
-    nfc_nci.leo
+    nfc_nci.pn54x.default
 
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
