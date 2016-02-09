@@ -14,83 +14,13 @@
 
 TARGET_KERNEL_CONFIG := aosp_shinano_leo_defconfig
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/leo/overlay
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, device/sony/shinano/platform.mk)
-$(call inherit-product, vendor/sony/leo/leo-vendor.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/leo/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-PRODUCT_COPY_FILES += \
-    device/sony/leo/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/sony/leo/rootdir/system/etc/BCM4339.hcd:system/etc/firmware/BCM43xx.hcd \
-    device/sony/leo/rootdir/system/etc/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    device/sony/leo/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
-    device/sony/leo/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/leo/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/leo/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/sony/leo/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml
-
-PRODUCT_COPY_FILES += \
-    device/sony/leo/rootdir/system/etc/tfa98xx/coldboot.patch:/system/etc/tfa98xx/coldboot.patch \
-    device/sony/leo/rootdir/system/etc/tfa98xx/TFA9890.patch:/system/etc/tfa98xx/TFA9890.patch \
-    device/sony/leo/rootdir/system/etc/tfa98xx/TFA9890_top.config:/system/etc/tfa98xx/TFA9890_top.config \
-    device/sony/leo/rootdir/system/etc/tfa98xx/TFA9890_btm.config:/system/etc/tfa98xx/TFA9890_btm.config \
-    device/sony/leo/rootdir/system/etc/tfa98xx/btm.speaker:/system/etc/tfa98xx/btm.speaker \
-    device/sony/leo/rootdir/system/etc/tfa98xx/top.speaker:/system/etc/tfa98xx/top.speaker \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeaker_top.preset:/system/etc/tfa98xx/HiFiSpeaker_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeaker_btm.preset:/system/etc/tfa98xx/HiFiSpeaker_btm.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_top.preset:/system/etc/tfa98xx/HiFiSpeakerRing_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_btm.preset:/system/etc/tfa98xx/HiFiSpeakerRing_btm.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_top.preset:/system/etc/tfa98xx/HiFiSpeakerSforce_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_btm.preset:/system/etc/tfa98xx/HiFiSpeakerSforce_btm.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_top.preset:/system/etc/tfa98xx/VoiceCallSpeaker_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_btm.preset:/system/etc/tfa98xx/VoiceCallSpeaker_btm.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/FMSpeaker_top.preset:/system/etc/tfa98xx/FMSpeaker_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/FMSpeaker_btm.preset:/system/etc/tfa98xx/FMSpeaker_btm.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeaker_top.eq:/system/etc/tfa98xx/HiFiSpeaker_top.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeaker_btm.eq:/system/etc/tfa98xx/HiFiSpeaker_btm.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_top.eq:/system/etc/tfa98xx/HiFiSpeakerRing_top.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerRing_btm.eq:/system/etc/tfa98xx/HiFiSpeakerRing_btm.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_top.eq:/system/etc/tfa98xx/HiFiSpeakerSforce_top.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/HiFiSpeakerSforce_btm.eq:/system/etc/tfa98xx/HiFiSpeakerSforce_btm.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_top.eq:/system/etc/tfa98xx/VoiceCallSpeaker_top.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallSpeaker_btm.eq:/system/etc/tfa98xx/VoiceCallSpeaker_btm.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/FMSpeaker_top.eq:/system/etc/tfa98xx/FMSpeaker_top.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/FMSpeaker_btm.eq:/system/etc/tfa98xx/FMSpeaker_btm.eq \
-    device/sony/leo/rootdir/system/etc/tfa98xx/TFA9890_Receiver.config:/system/etc/tfa98xx/TFA9890_Receiver.config \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.preset:/system/etc/tfa98xx/VoiceCallEarpice_top.preset \
-    device/sony/leo/rootdir/system/etc/tfa98xx/VoiceCallEarpice_top.eq:/system/etc/tfa98xx/VoiceCallEarpice_top.eq
-
-# Device Init
-PRODUCT_PACKAGES += \
-    init.recovery.leo \
-    init.leo \
-    ueventd.leo
-
-# Lights
-PRODUCT_PACKAGES += \
-    lights.leo
-
-# Simple PowerHAL
-PRODUCT_PACKAGES += \
-    power.leo
-
-# NFC config
-PRODUCT_PACKAGES += \
-    nfc_nci.pn54x.default
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
 PRODUCT_MODEL := Xperia Z3 (AOSP)
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-
-PRODUCT_AAPT_CONFIG := large
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480 \
-    ro.usb.pid_suffix=1BA
