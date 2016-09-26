@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_d6603.mk \
-                     $(LOCAL_DIR)/aosp_d6633.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/leo/aosp_d6603.mk)
 
+PRODUCT_NAME := aosp_d6633
+PRODUCT_MODEL := Xperia Z3 Dual (AOSP)
