@@ -19,6 +19,10 @@ $(call inherit-product, device/sony/leo/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Nfc
+PRODUCT_PACKAGES += \
+    nfc_nci.leo
+
 PRODUCT_NAME := aosp_d6603
 PRODUCT_DEVICE := leo
 PRODUCT_MODEL := Xperia Z3 (AOSP)
