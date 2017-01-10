@@ -27,3 +27,5 @@ BOARD_KERNEL_CMDLINE += androidboot.hardware=leo
 PRODUCT_VENDOR_KERNEL_HEADERS += $(DEVICE_PATH)/kernel-headers
 
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2143289344
